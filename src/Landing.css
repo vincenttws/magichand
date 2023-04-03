@@ -1,0 +1,52 @@
+.App {
+  margin: 20px;
+}
+
+.header-buttons {
+  position: absolute;
+  right: 100px;
+  margin-top: -10px;
+}
+
+.header-buttons, .App-logo {
+  display: inline-block;
+  position: fixed;
+}
+
+.Login-button {
+  width: 70px;
+  height: 30px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.Sign-up-button {
+  color: white;
+  background-color: dodgerblue;
+  margin: 10px;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: white;
+}
+
+.header-description {
+  text-align: center;
+  padding: 40px;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.footer-div {
+  background-color: black;
+  color: white;
+  padding: 5px 0px 5px 30px;
+  position: fixed;
+  bottom: 0;
+  width: 92%;
+}
