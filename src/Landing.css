@@ -1,52 +1,76 @@
-.App {
-  margin: 20px;
+.top-middle {
+  text-align: center;
+}
+
+.App-logo {
+  position: absolute;
+  left: 100px;
+  width: 180px;
+  height: 50px;
 }
 
 .header-buttons {
   position: absolute;
   right: 100px;
-  margin-top: -10px;
+  margin-top: -20px;
 }
 
 .header-buttons, .App-logo {
   display: inline-block;
-  position: fixed;
+  margin-top: 30px;
 }
 
-.Login-button {
+button {
   width: 70px;
   height: 30px;
   margin: 10px;
+  border-radius: 4px;
+}
+
+.Login-button {
   background-color: white;
-  border-radius: 5px;
   border: none;
 }
 
 .Sign-up-button {
   color: white;
-  background-color: dodgerblue;
-  margin: 10px;
-  width: 70px;
-  height: 30px;
-  border-radius: 5px;
+  background-color: #3B82F6;
   border-color: white;
 }
 
 .header-description {
   text-align: center;
-  padding: 40px;
+  padding: 80px;
+  text-align: center;
 }
 
 .header-title {
+  font-size: 30px;
   font-weight: bold;
-  font-size: 25px;
+  line-height: 68px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.header-text {
+  margin-top: -20px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .footer-div {
-  background-color: black;
+  background-color: #1E293B;
   color: white;
   padding: 5px 0px 5px 30px;
-  position: fixed;
   bottom: 0;
-  width: 92%;
+  width: 100%;
+  position: fixed;
+}
+
+.footer-text {
+  left: 100px;
+}
+
+.inter-font {
+  font-family: Inter;
 }
