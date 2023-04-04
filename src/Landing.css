@@ -1,38 +1,43 @@
-.top-middle {
-  text-align: center;
+html,
+body {
+  font-family: Inter, san-serif;  
 }
 
-.App-logo {
-  position: absolute;
-  left: 100px;
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.app-logo {
   width: 180px;
   height: 50px;
 }
 
-.header-buttons {
-  position: absolute;
-  right: 100px;
-  margin-top: -20px;
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 16px;
 }
 
-.header-buttons, .App-logo {
-  display: inline-block;
-  margin-top: 30px;
+.header-buttons {
+  display: flex;
+  gap: 10px;
 }
 
 button {
   width: 70px;
   height: 30px;
-  margin: 10px;
   border-radius: 4px;
-}
-
-.Login-button {
-  background-color: white;
   border: none;
+  cursor: pointer;
 }
 
-.Sign-up-button {
+.login-button {
+  background-color: transparent;
+}
+
+.sign-up-button {
   color: white;
   background-color: #3B82F6;
   border-color: white;
@@ -41,38 +46,31 @@ button {
 .header-description {
   text-align: center;
   padding: 80px;
-  text-align: center;
 }
 
 .header-title {
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 60px;
+  font-weight: 800;
   line-height: 68px;
   letter-spacing: 0em;
   text-align: center;
+  margin: 0;
 }
 
 .header-text {
-  margin-top: -20px;
+  margin-top: 20px;
   font-size: 20px;
   font-weight: 400;
 }
 
-.footer-div {
+footer {
   background-color: #1E293B;
   color: white;
-  padding: 5px 0px 5px 30px;
-  bottom: 0;
-  width: 100%;
-  position: fixed;
+  padding: 68px 0;
 }
 
-.footer-text {
-  left: 100px;
-}
-
-.inter-font {
-  font-family: Inter;
+footer p {
+  margin: 16px 0 0;
 }
 
 .feature-box {
