@@ -5,6 +5,7 @@ import intuitiveLogo from './intuitive_logo.svg';
 import moreLogo from './more_logo.svg';
 import './Landing.css';
 import FeaturesBox from './components/FeaturesBox';
+import SignupButton from './components/SignupButton';
 
 const features = [
   {
@@ -32,7 +33,7 @@ function Landing() {
           <img src={logo} className="App-logo" alt="logo" />
           <div className="header-buttons">
             <button className="login-button">Login</button>
-            <button className="sign-up-button">Sign Up</button>
+            <SignupButton text="Sign Up" />
           </div>
         </div>
       </nav>
@@ -41,8 +42,8 @@ function Landing() {
         <p className="header-text">Only the best can serve you right and we have confident to prove it to you</p>
       </div>
       <div>
-        <div className="feature-section" style={{ display: "inline-block" }}>
-          {features.map((feature) => <FeaturesBox {...feature} style={{ display: "inline-block" }} />)}
+        <div className="feature-section container">
+          {features.map((feature) => <FeaturesBox {...feature} />)}
         </div>
       </div>
       
