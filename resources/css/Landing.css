@@ -76,7 +76,10 @@ footer p {
 .feature-section {
   display: flex;
   justify-content: space-between;
-  margin: 20px auto;
+  margin: 0 auto 150px auto;
+  max-width: 1050px;
+  margin-top: -20%;
+  position: relative;
 }
 
 .feature-box {
@@ -84,5 +87,13 @@ footer p {
   max-height: 160px;
   padding: 10px 20px 15px 20px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.connector {
+  background-color: white;
+  height: 600px;
+  margin-top: -50%;
+  background: linear-gradient(0deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(1px);
 }
 

@@ -17,28 +17,12 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    // dd(Inertia::render('Welcome', [
-    //     'canLogin' => Route::has('login'),
-    //     'canRegister' => Route::has('register'),
-    //     'laravelVersion' => Application::VERSION,
-    //     'phpVersion' => PHP_VERSION,
-    // ]));
-    return Inertia::render('Welcome', [
+    return Inertia::render('Landing', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]); 
-});
-
-Route::get('/d', function () {
-    // dd(Inertia::render('Welcome', [
-    //     'canLogin' => Route::has('login'),
-    //     'canRegister' => Route::has('register'),
-    //     'laravelVersion' => Application::VERSION,
-    //     'phpVersion' => PHP_VERSION,
-    // ]));
-    return Inertia::render('Landing'); 
 });
 
 Route::get('/dashboard', function () {

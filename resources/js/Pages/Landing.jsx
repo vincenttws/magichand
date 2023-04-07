@@ -3,6 +3,7 @@ import logoWhite from '../../images/logo_white.svg';
 import intelligentLogo from '../../images/intelligent_logo.svg';
 import intuitiveLogo from '../../images/intuitive_logo.svg';
 import moreLogo from '../../images/more_logo.svg';
+import hero from '../../images/hero.svg';
 import '../../css/Landing.css';
 import FeaturesBox from '../components/FeaturesBox';
 import SignupButton from '../components/SignupButton';
@@ -26,35 +27,38 @@ const features = [
 ];
 
 function Landing() {
-  return (
-    <div>
-      <nav className="app-header container">
-        <div className="top-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <div className="header-buttons">
-            <button className="login-button">Login</button>
-            <SignupButton text="Sign Up" />
-          </div>
+    return (
+        <div>
+            <nav className="app-header container">
+                <div className="top-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <div className="header-buttons">
+                        <button className="login-button">Login</button>
+                        <SignupButton text="Sign Up" />
+                    </div>
+                </div>
+            </nav>
+            <div className="header-description">
+                <h1 className="header-title">Intelligent and Intuitive<br />Stock Portfolio Management</h1>
+                <p className="header-text">Only the best can serve you right and we have confident to prove it to you</p>
+            </div>
+
+            <div className="container">
+                <img src={hero} className="hero_image" alt="logo" />
+                <div className="connector"></div>
+                <div className="feature-section">
+                    {features.map((feature) => <FeaturesBox {...feature} />)}
+                </div>
+            </div>
+        
+            <footer>
+                <div className="container">
+                    <img src={logoWhite} className="App-logo" alt="logo" />
+                    <p>Made with ❤️. All rights reserved</p>
+                </div>
+            </footer>
         </div>
-      </nav>
-      <div className="header-description">
-        <h1 className="header-title">Intelligent and Intuitive<br />Stock Portfolio Management</h1>
-        <p className="header-text">Only the best can serve you right and we have confident to prove it to you</p>
-      </div>
-      <div>
-        <div className="feature-section container">
-          {features.map((feature) => <FeaturesBox {...feature} />)}
-        </div>
-      </div>
-      
-      <footer>
-        <div className="container">
-          <img src={logoWhite} className="App-logo" alt="logo" />
-          <p>Made with ❤️. All rights reserved</p>
-        </div>
-      </footer>
-    </div>
-  );
+    );
 }
 
 export default Landing;
