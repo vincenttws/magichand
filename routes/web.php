@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegisterUserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
+use function NunoMaduro\Collision\Exceptions\getMessage;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +25,48 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
+        'isLogin' => session()->has('isLogin') ? session()->get('isLogin') : false,
+    ]); 
+});
+
+Route::get('/loginp', function () {
+    $emailError = "";
+    $passwordError = "";
+    if (session("errors")) {
+        if (session("errors")->getMessages()['email'] ?? null) {
+            $passwordError = session("errors")->getMessages()['email'][0];
+        }
+    }
+
+    return Inertia::render('LoginSignup', [
+        'text' => "Login",
+        'url' => "login",
+        'navText' => "Sign Up",
+        'navLink' => '/signup',
+        'emailError' => $emailError,
+        'passwordError' => $passwordError
+    ]); 
+});
+
+Route::get('/signup', function () {
+    $emailError = "";
+    $passwordError = "";
+    if (session("errors")) {
+        if (session("errors")->getMessages()['email'] ?? null) {
+            $emailError = session("errors")->getMessages()['email'][0];
+        }
+
+        if (session("errors")->getMessages()['password'] ?? null) {
+            $passwordError = session("errors")->getMessages()['password'][0];
+        }
+    }
+    return Inertia::render('LoginSignup', [
+        'text' => "Sign Up",
+        'url' => "register",
+        'navText' => "Login",
+        'navLink' => '/loginp',
+        'emailError' => $emailError,
+        'passwordError' => $passwordError
     ]); 
 });
 

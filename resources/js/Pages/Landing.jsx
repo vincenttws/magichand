@@ -1,12 +1,12 @@
-import logo from '../../images/logo.svg';
-import logoWhite from '../../images/logo_white.svg';
 import intelligentLogo from '../../images/intelligent_logo.svg';
 import intuitiveLogo from '../../images/intuitive_logo.svg';
 import moreLogo from '../../images/more_logo.svg';
 import hero from '../../images/hero.svg';
-import '../../css/Landing.css';
+import '../../css/landing.css';
 import FeaturesBox from '../components/FeaturesBox';
-import SignupButton from '../components/SignupButton';
+import PageFooter from '../components/PageFooter';
+import logo from '../../images/logo.svg';
+import HeaderButton from '../Components/HeaderButton';
 
 const features = [
   {
@@ -26,17 +26,25 @@ const features = [
   }
 ];
 
-function Landing() {
+function Landing({ isLogin }) {
     return (
         <div>
             <nav className="app-header container">
-                <div className="top-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <div className="header-buttons">
-                        <button className="login-button">Login</button>
-                        <SignupButton text="Sign Up" />
-                    </div>
+              <div className="top-header">
+                <a href="/"><img src={logo} className="app-logo" alt="logo" /></a>
+                <div className="header-buttons">
+                  {isLogin ? (
+                    <a href="/dashboard" className="login-button login_signup_button">Dashboard</a>
+                  ) : (
+                    <a href="/loginp" className="login-button login_signup_button">Login</a>
+                  )}
+                  {isLogin ? (
+                    <HeaderButton text="Logout" url=""/>
+                  ) : (
+                    <HeaderButton text="Sign Up" url="/signup"/>
+                  )}
                 </div>
+              </div>
             </nav>
             <div className="header-description">
                 <h1 className="header-title">Intelligent and Intuitive<br />Stock Portfolio Management</h1>
@@ -52,10 +60,7 @@ function Landing() {
             </div>
         
             <footer>
-                <div className="container">
-                    <img src={logoWhite} className="App-logo" alt="logo" />
-                    <p>Made with ❤️. All rights reserved</p>
-                </div>
+                <PageFooter />
             </footer>
         </div>
     );

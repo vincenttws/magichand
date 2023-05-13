@@ -25,12 +25,14 @@ body {
   gap: 10px;
 }
 
-button {
-  width: 70px;
-  height: 30px;
+.login_signup_button {
+  width: 75px;
+  height: 35px;
   border-radius: 4px;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
+  padding-top: 4px;
+  text-align: center;
 }
 
 .login-button {

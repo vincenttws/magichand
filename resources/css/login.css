@@ -1,0 +1,13 @@
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 600px;
+}
+
+.form_section {
+  width: 680px; 
+  margin: 10px auto 50px auto;
+  padding: 50px 40px 10px 40px;
+}
