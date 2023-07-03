@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterUserController;
+use App\Http\Controllers\StockController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -18,6 +19,16 @@ use function NunoMaduro\Collision\Exceptions\getMessage;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/sidebar', function() {
+    return Inertia::render('Sidebar');
+});
+
+Route::get('/add', function() {
+    return Inertia::render('AddForm');
+});
+
+Route::post('/addEntries', [StockController::class, 'store']);
 
 Route::get('/', function () {
     return Inertia::render('Landing', [
