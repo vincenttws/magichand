@@ -16,12 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string("stock_code");
             $table->string("stock_name");
-            $table->date("buy_date");
-            $table->integer("buy_quantity");
-            $table->double("buy_price");
-            $table->date("sell_date");
-            $table->integer("sell_quantity");
-            $table->double("sell_price");
+            $table->string("buy_info");
         });
     }
 

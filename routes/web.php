@@ -25,8 +25,16 @@ Route::get('/sidebar', function() {
 });
 
 Route::get('/add', function() {
-    return Inertia::render('AddForm');
+    return Inertia::render('StockForm');
 });
+
+Route::get('/edit/{id}', [StockController::class, 'edit']);
+
+Route::post('/update/{id}', [StockController::class, 'update']);
+
+Route::get('/delete/{id}', [StockController::class, 'delete']);
+
+Route::get('/portfolios', [StockController::class, 'retrieveAll']);
 
 Route::post('/addEntries', [StockController::class, 'store']);
 

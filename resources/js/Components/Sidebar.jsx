@@ -2,7 +2,7 @@ import logo from '../../images/logo.svg';
 import dashboardLogo from '../../images/dashboardLogo.svg';
 import manageLogo from '../../images/manageLogo.svg';
 import '../../css/landing.css';
-import SidebarMenu from '../Components/SidebarMenu';
+import SidebarMenu from './SidebarMenu';
 
 const sideBarMenus = [
     {
@@ -10,6 +10,7 @@ const sideBarMenus = [
         menuText: "Dashboard"
     },
     {
+        link: "/portfolios",
         menuLogo: manageLogo,
         menuText: "Manage"
     }
@@ -17,7 +18,7 @@ const sideBarMenus = [
 
 function Sidebar() {
     return (
-        <div className="max-w-xs max-h-screen" style={{ backgroundColor: "#1E293B" }}>
+        <div className="drop-shadow-2xl" style={{ backgroundColor: "#1E293B" }}>
             <div className="flex justify-center">
                 <a href="/"><img src={logo} className="app-logo my-3" alt="logo" /></a>
             </div>  
